@@ -1,0 +1,20 @@
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <div class="header__start">
+        <a href="#" class="logo header__logo">
+          <img class="header__logo-icon" src="./assets/images/logo.svg" alt="">
+          Об авторе
+        </a>
+      </div>
+      <div class="header__end">
+        {% view "^nav_menu" %}
+        <button class="btn header__callback-btn">
+          Задать вопрос
+        </button>
+      </div>
+      {% view "@burger" %}
+      {% view "^burger_menu" %}
+    </div>
+  </div>
+</header>

@@ -1,0 +1,137 @@
+.faq {
+  $this: &;
+
+  padding: rem(56) 0 rem(83);
+
+  @include media('767', max) {
+    padding: rem(56) 0 rem(30);
+  }
+
+  &__title {
+    max-width: rem(763);
+    margin-bottom: rem(80);
+
+    @include media('1024', max) {
+      margin-bottom: rem(50);
+    }
+
+    @include media('767', max) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: rem(10);
+    background-image: url('../assets/images/faq_bears/01.png');
+    background-repeat: no-repeat;
+    background-size: 45.7% auto;
+    background-position: -2.3% rem(-10);
+    animation: animateBgBears 15s infinite ease-out;
+
+    @include media('500', max) {
+      animation: none;
+      background-image: none;
+    }
+
+    @keyframes animateBgBears {
+      00%,
+      11% {
+        background-image: url('../assets/images/faq_bears/01.png');
+      }
+
+      12%,
+      24% {
+        background-image: url('../assets/images/faq_bears/02.png');
+      }
+
+      25%,
+      36% {
+        background-image: url('../assets/images/faq_bears/03.png');
+      }
+
+      37%,
+      49% {
+        background-image: url('../assets/images/faq_bears/04.png');
+      }
+
+      50%,
+      61% {
+        background-image: url('../assets/images/faq_bears/05.png');
+      }
+
+      62%,
+      74% {
+        background-image: url('../assets/images/faq_bears/07.png');
+      }
+
+      75%,
+      86% {
+        background-image: url('../assets/images/faq_bears/08.png');
+      }
+
+      87%,
+      100% {
+        background-image: url('../assets/images/faq_bears/01.png');
+      }
+    }
+
+    @include media('500', max) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media('500', max) {
+      align-items: inherit;
+    }
+
+    @include media('501', min) {
+      grid-column: span 3;
+    }
+  }
+
+  &__end {
+    @include media('501', min) {
+      grid-column: span 4;
+    }
+
+    @include media('500', max) {
+      grid-row: 1 / 2;
+    }
+  }
+
+  &__callback {
+    margin-top: 61.5%;
+    transition: opacity var(--transition1);
+
+    @include media('500', max) {
+      margin-top: 0;
+    }
+
+    &-btn {
+      @include font-size(17, 14);
+      font-weight: 600;
+      text-transform: uppercase;
+      opacity: 0.8;
+      transition: opacity var(--transition1);
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &-descr {
+      @include font-size(14, 20);
+      font-family: var(--ff1);
+      font-weight: 300;
+      margin-bottom: rem(8);
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "sculpture_slider": {
+    "items": [{
+      "image": {
+        "name": "sculpture/01.jpg"
+      },
+      "content": {
+        "btn": {
+          "text": "Под заказ"
+        }
+      }
+    }, {
+      "image": {
+        "name": "sculpture/02.jpg"
+      },
+      "content": {
+        "btn": {
+          "text": "Купить"
+        }
+      }
+    }, {
+      "image": {
+        "name": "sculpture/03.jpg"
+      },
+      "content": {
+        "btn": {
+          "text": "Купить"
+        }
+      }
+    }, {
+      "image": {
+        "name": "sculpture/04.jpg"
+      },
+      "content": {
+        "btn": {
+          "text": "Купить"
+        }
+      }
+    }, {
+      "image": {
+        "name": "sculpture/01.jpg"
+      },
+      "content": {
+        "btn": {
+          "text": "Под заказ"
+        }
+      }
+    }, {
+      "image": {
+        "name": "sculpture/02.jpg"
+      },
+      "content": {
+        "btn": {
+          "text": "Купить"
+        }
+      }
+    }, {
+      "image": {
+        "name": "sculpture/03.jpg"
+      },
+      "content": {
+        "btn": {
+          "text": "Купить"
+        }
+      }
+    }, {
+      "image": {
+        "name": "sculpture/04.jpg"
+      },
+      "content": {
+        "btn": {
+          "text": "Купить"
+        }
+      }
+    }]
+  }
+}

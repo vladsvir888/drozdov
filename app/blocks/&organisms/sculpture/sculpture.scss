@@ -1,0 +1,9 @@
+.sculpture {
+  padding: rem(56) 0 rem(164);
+  background-color: var(--pallette-cod-gray);
+
+  &__title {
+    max-width: rem(751);
+    margin-bottom: rem(64);
+  }
+}

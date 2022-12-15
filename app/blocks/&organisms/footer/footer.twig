@@ -1,0 +1,21 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <p class="footer__copyright">
+        <small>© 2022 Алексей Дроздов</small>
+      </p>
+      <div class="footer__payment">
+        Оплата онлайн
+        {% view "@icon" with {
+          "icon": {
+            "class": "footer__payment-icon",
+            "name": "sprite-mono.svg#sberbank"
+          }
+        } %}
+      </div>
+      <p class="footer__developer">
+        Разработка сайта — <a class="footer__developer-link" href="#">iMedia Solutions</a>
+      </p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,21 @@
+.title {
+  &--h2 {
+    font-size: rem(90);
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+
+    @include media('1024', max) {
+      font-size: rem(58);
+    }
+
+    @include media('767', max) {
+      font-size: rem(35);
+    }
+
+    @include media('500', max) {
+      font-size: rem(26);
+    }
+  }
+}

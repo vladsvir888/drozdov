@@ -1,0 +1,23 @@
+<button
+  class="btn burger"
+  aria-label="Открыть мобильное меню"
+  aria-expanded="false"
+  aria-controls="burger_menu"
+>
+  {% view "@icon" with {
+    icon: {
+      class: "burger__icon burger__icon--menu",
+      name: "sprite-mono.svg#menu",
+      attrs: 'aria-hidden="true"'
+    }
+  } %}
+
+  {% view "@icon" with {
+    icon: {
+      class: "burger__icon burger__icon--close",
+      name: "sprite-mono.svg#close",
+      attrs: 'aria-hidden="true"'
+    }
+  } %}
+  Меню
+</button>

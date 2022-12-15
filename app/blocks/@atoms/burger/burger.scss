@@ -1,0 +1,43 @@
+.burger {
+  $this: &;
+  display: none;
+
+  @include media('1024', max) {
+    @include flex-center;
+  }
+
+  &--active {
+    ~ #{$this}-menu {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #{$this}__icon {
+      &--close {
+        display: block;
+      }
+
+      &--menu {
+        display: none;
+      }
+    }
+  }
+
+  &__icon {
+    fill: var(--pallette-white);
+    flex-shrink: 0;
+    pointer-events: none;
+    margin-right: rem(10);
+
+    &--menu {
+      width: rem(25);
+      height: rem(25);
+    }
+
+    &--close {
+      display: none;
+      width: rem(22);
+      height: rem(22);
+    }
+  }
+}

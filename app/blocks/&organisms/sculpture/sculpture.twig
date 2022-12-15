@@ -1,0 +1,11 @@
+<section class="sculpture">
+  <div class="container">
+    {% view "@title" with {
+      title: sculpture.title|merge({
+        level: 2,
+        class: "title--h2 sculpture__title"
+      })
+    } %}
+  </div>
+  {% view "^sculpture_slider" %}
+</section>

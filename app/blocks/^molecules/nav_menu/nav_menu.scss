@@ -1,0 +1,15 @@
+.nav-menu {
+  &__list {
+    @include flex-center-y;
+    gap: rem(44);
+  }
+
+  &__link {
+    text-decoration: none;
+    transition: color var(--transition1);
+
+    &:hover {
+      color: var(--pallette-silver);
+    }
+  }
+}

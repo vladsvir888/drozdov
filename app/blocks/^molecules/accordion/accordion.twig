@@ -1,0 +1,21 @@
+<div class="accordion">
+  {% for item in accordion.items %}
+    <div class="accordion__item">
+      <h2 class="accordion__heading" {{ item.title.attrs }}>
+        <button class="btn accordion__btn" {{ item.title.btn.attrs }}>
+          {{ item.title.btn.text }}
+
+          {% view "@icon" with {
+            icon: {
+              class: "accordion__btn-icon",
+              name: "sprite-mono.svg#arrow"
+            }
+          } %}
+        </button>
+      </h2>
+      <section class="accordion__content" {{ item.content.attrs }}>
+        {{ item.content.text }}
+      </section>
+    </div>
+  {% endfor %}
+</div>

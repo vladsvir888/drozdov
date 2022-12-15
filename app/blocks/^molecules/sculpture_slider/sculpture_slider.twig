@@ -1,0 +1,40 @@
+<div class="swiper sculpture-slider">
+  <div class="swiper-wrapper">
+    {% for item in sculpture_slider.items %}
+      <div class="swiper-slide sculpture-slider__item">
+        <div class="sculpture-slider__img-wrap">
+          {% view "@image" with {
+            image: item.image|merge({
+              lazy: false
+            })
+          } %}
+        </div>
+        <div class="sculpture-slider__content">
+          <div class="sculpture-slider__content-left">
+            <h3 class="sculpture-slider__content-title">
+              Скульптура, 2022
+            </h3>
+            <p class="sculpture-slider__content-size">
+              30x24x88 см
+            </p>
+            <p class="sculpture-slider__content-price">
+              1000$
+            </p>
+          </div>
+          <div class="sculpture-slider__content-right">
+            <button class="btn sculpture-slider__content-btn">
+              {{ item.content.btn.text }}
+
+              {% view "@icon" with {
+                icon: {
+                  class: "sculpture-slider__content-icon",
+                  name: "sprite-mono.svg#arrow"
+                }
+              } %}
+            </button>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

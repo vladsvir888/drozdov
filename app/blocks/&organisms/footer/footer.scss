@@ -1,0 +1,55 @@
+.footer {
+  @include font-size(14, 20);
+  padding-bottom: rem(16);
+  font-family: var(--ff2);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: rem(10);
+
+    @include media('900', max) {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__copyright {
+    grid-column: span 3;
+
+    small {
+      font: inherit;
+    }
+  }
+
+  &__payment {
+    grid-column: span 2;
+
+    @include flex-center-y;
+    color: var(--pallette-white);
+    opacity: 0.5;
+
+    &-icon {
+      width: rem(95);
+      height: rem(15);
+      margin-left: rem(8);
+      fill: var(--pallette-white);
+    }
+  }
+
+  &__developer {
+    grid-column: 6 / 8;
+    text-align: right;
+
+    &-link {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
