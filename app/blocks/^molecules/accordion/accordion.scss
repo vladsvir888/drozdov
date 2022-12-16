@@ -2,7 +2,7 @@
   $this: &;
 
   &__item {
-    padding: rem(30) 0;
+    padding: rem(29.5) 0;
     border-bottom: rem(1) solid rgba(255, 255, 255, 0.25);
 
     @include media('767', max) {

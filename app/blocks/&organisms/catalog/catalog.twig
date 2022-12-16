@@ -1,0 +1,24 @@
+<section class="catalog">
+  <div class="container">
+    {% view "@title" with {
+      title: catalog.title|merge({
+        level: 2,
+        class: "title--h2 catalog__title"
+      })
+    } %}
+
+    <p class="catalog__text">
+      {{ catalog.text }}
+    </p>
+
+    <ul class="catalog__inner">
+      {% for item in catalog.items %}
+        <li class="catalog__item">
+          {% view "^product" with {
+            product: item
+          } %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

@@ -1,11 +1,30 @@
 <section class="sculpture">
   <div class="container">
-    {% view "@title" with {
-      title: sculpture.title|merge({
-        level: 2,
-        class: "title--h2 sculpture__title"
-      })
-    } %}
+    <div class="sculpture__inner">
+      {% view "@title" with {
+        title: sculpture.title|merge({
+          level: 2,
+          class: "title--h2 sculpture__title"
+        })
+      } %}
+
+      <div class="sculpture__buttons">
+        <div class="swiper-button-prev sculpture__slider-btn">
+          {% view "@icon" with {
+            icon: {
+              name: "sprite-mono.svg#arrow-slider-prev"
+            }
+          } %}
+        </div>
+        <div class="swiper-button-next sculpture__slider-btn">
+          {% view "@icon" with {
+            icon: {
+              name: "sprite-mono.svg#arrow-slider-next"
+            }
+          } %}
+        </div>
+      </div>
+    </div>
   </div>
   {% view "^sculpture_slider" %}
 </section>

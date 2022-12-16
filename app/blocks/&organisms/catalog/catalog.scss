@@ -1,0 +1,48 @@
+.catalog {
+  padding: rem(56) 0 rem(96);
+  background-color: var(--pallette-cod-gray);
+
+  &__title {
+    max-width: rem(921);
+    margin-bottom: rem(96);
+
+    @include media('900', max) {
+      margin-bottom: rem(48);
+    }
+
+    @include media('500', max) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__text {
+    @include font-size(14, 20);
+    font-weight: 300;
+    font-family: var(--ff2);
+    opacity: 0.8;
+    max-width: rem(397);
+    margin-left: 58%;
+    margin-bottom: rem(96);
+
+    @include media('900', max) {
+      margin-left: 0;
+      margin-bottom: rem(48);
+    }
+
+    @include media('500', max) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: rem(10);
+  }
+
+  &__item {
+    &:nth-child(3n + 1) {
+      grid-column: span 2;
+    }
+  }
+}

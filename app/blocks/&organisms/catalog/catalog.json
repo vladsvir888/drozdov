@@ -1,0 +1,171 @@
+{
+  "catalog": {
+    "title": {
+      "text": "Каждый может найти своего медведя"
+    },
+    "text": "За годы существования коллекции, медведи были раскрашены в разных техниках: жостовская, палехская и мезенская роспись, городецкая и хохломская, национальные и исторические мотивы, современные сюжеты и стрит-арт. Однако всегда их основа была неизменна – образ сильного, движущегося, хищного зверя, как символ мудрой силы, незыблемости традиций и духа России.",
+    "items": [{
+      "slides": [{
+        "image": {
+          "name": "catalog/01_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/04_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/07_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/01_color.jpg"
+        }
+      }]
+    }, {
+      "slides": [{
+        "image": {
+          "name": "catalog/02_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/03_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/05_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/02_color.jpg"
+        }
+      }]
+    }, {
+      "slides": [{
+        "image": {
+          "name": "catalog/03_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/05_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/02_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/03_color.jpg"
+        }
+      }]
+    }, {
+      "slides": [{
+        "image": {
+          "name": "catalog/04_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/01_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/07_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/04_color.jpg"
+        }
+      }]
+    }, {
+      "slides": [{
+        "image": {
+          "name": "catalog/05_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/06_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/05_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/06_color.jpg"
+        }
+      }]
+    }, {
+      "slides": [{
+        "image": {
+          "name": "catalog/06_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/05_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/06_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/05_color.jpg"
+        }
+      }]
+    }, {
+      "slides": [{
+        "image": {
+          "name": "catalog/07_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/01_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/04_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/07_color.jpg"
+        }
+      }]
+    }, {
+      "slides": [{
+        "image": {
+          "name": "catalog/08_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/03_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/02_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/08_color.jpg"
+        }
+      }]
+    }, {
+      "slides": [{
+        "image": {
+          "name": "catalog/09_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/02_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/09_color.jpg"
+        }
+      }, {
+        "image": {
+          "name": "catalog/02_color.jpg"
+        }
+      }]
+    }]
+  }
+}

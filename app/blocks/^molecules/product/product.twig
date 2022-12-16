@@ -1,0 +1,16 @@
+<div class="swiper product-slider">
+  <div class="swiper-wrapper">
+    {% for item in item.slides %}
+      <div class="swiper-slide">
+        <article class="product">
+          {% view "@image" with {
+            image: item.image|merge({
+              class: "product-slider__img"
+            })
+          } %}
+        </article>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="swiper-pagination"></div>
+</div>

@@ -1,5 +1,5 @@
 import LazyLoad from 'vanilla-lazyload';
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Pagination, EffectFade  } from 'swiper';
 
 document.addEventListener('DOMContentLoaded', () => {
   new LazyLoad();
@@ -102,14 +102,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // sculpture-slider
   new Swiper('.sculpture-slider', {
-    slidesPerView: 3.6,
+    slidesPerView: 1.2,
     spaceBetween: 10,
-    // slidesPerGroup: 4,
-    // loopFillGroupWithBlank: true,
     modules: [Navigation],
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+      500: {
+        slidesPerView: "auto",
+      }
+    }
+  });
+
+  // product-slider
+  document.querySelectorAll('.product-slider').forEach(slider => {
+    let arr;
+
+    const swiper = new Swiper(slider, {
+      modules: [Pagination, EffectFade],
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      noSwiping: true,
+      noSwipingClass: 'swiper-slide',
+      on: {
+        beforeInit: () => {
+          const slides = [...slider.querySelectorAll('.swiper-slide')];
+
+          arr = slides.map(slide => {
+            return slide.querySelector('img').getAttribute('data-src');
+          });
+        },
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: (index, className) => {
+          return `
+            <div class="${className}">
+              <img src="${arr[index]}">
+            </div>
+          `;
+        }
+      },
+    });
+
+    swiper.pagination.bullets.forEach(bullet => {
+      bullet.addEventListener('mouseover', () => {
+        bullet.click();
+      });
+    });
   });
 });
