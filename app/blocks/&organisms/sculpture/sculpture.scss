@@ -41,12 +41,8 @@
     overflow: hidden;
     transition: box-shadow var(--transition2);
 
-    @include media('500', max) {
-      width: rem(60);
-      height: rem(30);
-    }
-
-    &:hover {
+    &:hover,
+    &:focus {
       .icon {
         fill: var(--pallette-black);
       }

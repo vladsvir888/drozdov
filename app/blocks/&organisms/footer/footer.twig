@@ -5,9 +5,10 @@
         <small>© 2022 Алексей Дроздов</small>
       </p>
       <div class="footer__payment">
-        Оплата онлайн
+        Оплата онлайн <span class="visually-hidden">Сбербанк</span>
         {% view "@icon" with {
           "icon": {
+            "attrs": "aria-hidden='true'",
             "class": "footer__payment-icon",
             "name": "sprite-mono.svg#sberbank"
           }

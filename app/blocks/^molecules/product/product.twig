@@ -2,12 +2,32 @@
   <div class="swiper-wrapper">
     {% for item in item.slides %}
       <div class="swiper-slide">
-        <article class="product">
+        <article class="product-slider__card">
           {% view "@image" with {
             image: item.image|merge({
-              class: "product-slider__img"
+              class: "product-slider__img",
+              lazy: false,
+              attrs: "loading='lazy'"
             })
           } %}
+
+          <div class="product-slider__content">
+            <h3 class="product-slider__title">
+              {{ item.content.title }}
+            </h3>
+            <p class="product-slider__size">
+              {{ item.content.size }}
+            </p>
+            <p class="product-slider__text">
+              {{ item.content.text }}
+            </p>
+          </div>
+          <button class="btn product-slider__btn">
+            <span>Купить</span>
+            <span>
+              {{ item.content.price }}
+            </span>
+          </button>
         </article>
       </div>
     {% endfor %}

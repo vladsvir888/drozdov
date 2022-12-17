@@ -7,6 +7,15 @@
     padding: rem(56) 0 rem(30);
   }
 
+  @include media('500', max) {
+    padding: rem(56) 0 rem(83);
+    background-image: url('../assets/images/faq_bears/01.png');
+    background-size: 45.7% auto;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    animation: animateBgBears 15s infinite ease-out;
+  }
+
   &__title {
     max-width: rem(763);
     margin-bottom: rem(80);
@@ -33,48 +42,6 @@
     @include media('500', max) {
       animation: none;
       background-image: none;
-    }
-
-    @keyframes animateBgBears {
-      00%,
-      11% {
-        background-image: url('../assets/images/faq_bears/01.png');
-      }
-
-      12%,
-      24% {
-        background-image: url('../assets/images/faq_bears/02.png');
-      }
-
-      25%,
-      36% {
-        background-image: url('../assets/images/faq_bears/03.png');
-      }
-
-      37%,
-      49% {
-        background-image: url('../assets/images/faq_bears/04.png');
-      }
-
-      50%,
-      61% {
-        background-image: url('../assets/images/faq_bears/05.png');
-      }
-
-      62%,
-      74% {
-        background-image: url('../assets/images/faq_bears/07.png');
-      }
-
-      75%,
-      86% {
-        background-image: url('../assets/images/faq_bears/08.png');
-      }
-
-      87%,
-      100% {
-        background-image: url('../assets/images/faq_bears/01.png');
-      }
     }
 
     @include media('500', max) {

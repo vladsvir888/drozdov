@@ -59,6 +59,7 @@
     "extends @shopify/browserslist-config"
   ],
   "dependencies": {
+    "body-scroll-lock": "^4.0.0-beta.0",
     "core-js": "^3.20.0",
     "sweetalert2": "^11.4.20",
     "swiper": "^8.3.0",

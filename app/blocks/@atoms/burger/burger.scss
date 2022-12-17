@@ -7,10 +7,12 @@
   }
 
   &--active {
+    position: relative;
+    z-index: 1;
+
     ~ #{$this}-menu {
-      opacity: 1;
       visibility: visible;
-      margin-top: rem(10);
+      transform: translateX(0);
     }
 
     #{$this}__icon {

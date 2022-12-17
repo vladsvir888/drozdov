@@ -1,15 +1,40 @@
-// product-slider
 .product-slider {
   $this: &;
 
-  &:hover {
+  background-color: var(--pallette-black);
+
+  // &::before {
+  //   position: absolute;
+  //   inset: 0;
+  //   z-index: 10;
+  //   opacity: 0;
+  //   background: linear-gradient(360deg, var(--pallette-black) -25.96%, rgba(0, 0, 0, 0.456424) 16.38%, rgba(0, 0, 0, 0) 58.56%);
+  //   transition: opacity var(--transition1);
+  //   content: '';
+  // }
+
+  &:hover,
+  &:focus-within {
     .swiper-pagination {
       transform: translateY(0);
     }
 
     #{$this}__img {
       filter: saturate(100%);
+      transform: scale(1.02);
     }
+
+    #{$this}__content {
+      transform: translateY(0);
+    }
+
+    #{$this}__btn {
+      opacity: 1;
+    }
+
+    // &::before {
+    //   opacity: 1;
+    // }
   }
 
   .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -20,15 +45,31 @@
   .swiper-pagination {
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-left: rem(50);
+    max-width: rem(284);
     gap: rem(20);
     left: unset;
     right: rem(24);
     transform: translateY(rem(70));
     transition: transform var(--transition1);
+
+    @include media('1280', max) {
+      flex-direction: column;
+      justify-content: unset;
+      align-items: flex-end;
+    }
+
+    @include media('576', max) {
+      gap: rem(10);
+    }
   }
 
   .swiper-pagination-bullet {
+    position: relative;
+
     @include flex-center;
+    flex-shrink: 0;
     width: rem(55);
     height: rem(55);
     border-radius: rem(100);
@@ -36,9 +77,19 @@
     background-color: var(--pallette-mine-shaft);
 
     &-active {
-      outline: 1px solid var(--pallette-white);
-      outline-offset: rem(1.5);
       background-color: var(--pallette-black);
+
+      &::after {
+        box-shadow: inset 0 0 0 rem(5) var(--pallette-black);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: rem(100);
+        outline: rem(1) solid var(--pallette-white);
+        content: '';
+      }
     }
 
     img {
@@ -47,15 +98,104 @@
       height: 100%;
       object-fit: contain;
     }
+
+    @include media('576', max) {
+      width: rem(30);
+      height: rem(30);
+    }
   }
 
   &__img {
     filter: saturate(50%);
-    transition: filter var(--transition1);
+    transition: filter var(--transition1), transform var(--transition1);
   }
-}
 
-// product
-.product {
-  background-color: var(--pallette-black);
+  &__content {
+    position: absolute;
+    bottom: rem(19);
+    left: rem(24);
+    z-index: 1;
+    max-width: rem(316);
+    transform: translateY(rem(110));
+    transition: transform var(--transition1);
+
+    @include media('576', max) {
+      left: rem(15);
+      max-width: rem(220);
+      transform: translateY(rem(85));
+    }
+  }
+
+  &__title {
+    @include font-size(18, 22);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: rem(18);
+
+    @include media('576', max) {
+      font-size: rem(16);
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__size {
+    margin-bottom: rem(8);
+
+    @include media('576', max) {
+      margin-bottom: rem(4);
+    }
+  }
+
+  &__size,
+  &__text {
+    @include font-size(13, 20);
+    font-weight: 300;
+    opacity: 0.8;
+    font-family: var(--ff2);
+
+    @include media('576', max) {
+      font-size: rem(10);
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: rem(120);
+    height: rem(120);
+    padding: rem(20) rem(15);
+    border-radius: rem(122);
+    border: 0.1rem solid var(--pallette-white);
+    text-transform: uppercase;
+    font-family: var(--ff3);
+    font-weight: 300;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      transform var(--transition1),
+      background-color var(--transition1),
+      opacity var(--transition1);
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    > * {
+      &:not(:last-child) {
+        margin-bottom: rem(4);
+      }
+    }
+
+    span {
+      display: block;
+    }
+
+    @include media('576', max) {
+      padding: rem(5);
+      font-size: rem(8);
+    }
+  }
 }

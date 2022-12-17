@@ -8,14 +8,14 @@
     } %}
     <div class="faq__inner">
       <div class="faq__start">
-        <div class="faq__callback">
+        <aside class="faq__callback">
           <p class="faq__callback-descr">
             {{ faq.callback_block.descr }}
           </p>
           <button class="btn faq__callback-btn">
             {{ faq.callback_block.btn.text }}
           </button>
-        </div>
+        </aside>
       </div>
       <div class="faq__end">
         {% view "^accordion" %}

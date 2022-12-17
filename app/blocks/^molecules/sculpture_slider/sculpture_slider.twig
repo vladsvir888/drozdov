@@ -4,7 +4,9 @@
       <div class="swiper-slide sculpture-slider__item">
         <div class="sculpture-slider__wrap">
           {% view "@image" with {
-            image: item.image
+            image: item.image|merge({
+              lazy: false
+            })
           } %}
 
           <div class="sculpture-slider__content">

@@ -20,5 +20,11 @@
         </li>
       {% endfor %}
     </ul>
+
+    {% view "@quote" with {
+      quote: catalog.quote|merge({
+        class: "catalog__quote"
+      })
+    } %}
   </div>
 </section>

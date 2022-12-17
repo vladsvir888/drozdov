@@ -13,7 +13,7 @@
 
   &__inner {
     @include flex-center-between;
-    padding-top: rem(14);
+    padding: rem(14) 0;
   }
 
   &__end {

@@ -1,0 +1,21 @@
+.quote {
+  @include flex-column;
+  max-width: rem(775);
+  margin: 0 auto;
+
+  &__descr {
+    @include font-size(16, 24);
+    font-weight: 400;
+    text-align: center;
+    font-family: var(--ff3);
+    margin-bottom: rem(24);
+  }
+
+  &__author {
+    @include font-size(14, 20);
+    font-weight: 300;
+    opacity: 0.8;
+    font-family: var(--ff2);
+    margin-left: auto;
+  }
+}

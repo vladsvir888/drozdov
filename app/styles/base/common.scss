@@ -123,3 +123,45 @@ body {
   border: none;
   color: inherit;
 }
+
+@keyframes animateBgBears {
+  00%,
+  11% {
+    background-image: url('../assets/images/faq_bears/01.png');
+  }
+
+  12%,
+  24% {
+    background-image: url('../assets/images/faq_bears/02.png');
+  }
+
+  25%,
+  36% {
+    background-image: url('../assets/images/faq_bears/03.png');
+  }
+
+  37%,
+  49% {
+    background-image: url('../assets/images/faq_bears/04.png');
+  }
+
+  50%,
+  61% {
+    background-image: url('../assets/images/faq_bears/05.png');
+  }
+
+  62%,
+  74% {
+    background-image: url('../assets/images/faq_bears/07.png');
+  }
+
+  75%,
+  86% {
+    background-image: url('../assets/images/faq_bears/08.png');
+  }
+
+  87%,
+  100% {
+    background-image: url('../assets/images/faq_bears/01.png');
+  }
+}

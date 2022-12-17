@@ -14,6 +14,11 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      gap: rem(20);
+    }
+
+    @include media('500', max) {
+      gap: rem(5);
     }
   }
 
