@@ -1,0 +1,32 @@
+<section class="callback">
+	<div class="container">
+    {% view "^callback_slider" with {
+      callback_slider: callback.slider|merge({
+        class: "callback__slider"
+      })
+    } %}
+
+    <div class="callback__inner">
+      <div class="callback__item callback__block-text">
+        {% view "@title" with {
+          title: callback.title|merge({
+            level: 2,
+            class: "callback__title"
+          })
+        } %}
+
+        <p class="callback__descr">
+          {{ callback.descr }}
+        </p>
+      </div>
+
+      <div class="callback__item">
+        {% view "^form" with {
+          form: callback.form|merge({
+            class: "callback__form"
+          })
+        } %}
+      </div>
+    </div>
+	</div>
+</section>

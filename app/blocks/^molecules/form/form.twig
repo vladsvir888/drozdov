@@ -1,0 +1,19 @@
+<form action="/" method="post" class="form {{ form.class }}">
+  {% if form.type == 'callback' %}
+    <div class="form__header">
+      {% for item in form.items %}
+        {% view "@input" with {
+          input: item
+        } %}
+      {% endfor %}
+    </div>
+
+    <div class="form__footer">
+      <p class="form__note">
+        Нажимая кнопку “отправить”, я соглашаюсь с <a href="#">условиями обработки персональных данных </a>
+      </p>
+
+      <button class="btn form__btn">Отправить</button>
+    </div>
+  {% endif %}
+</form>

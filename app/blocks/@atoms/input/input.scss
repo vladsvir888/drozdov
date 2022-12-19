@@ -1,0 +1,37 @@
+.input-block {
+  $this: &;
+
+  position: relative;
+  @include font-size(16, 24);
+  font-weight: 300;
+  font-family: var(--ff2);
+  letter-spacing: -0.02em;
+  border-bottom: 0.1rem solid var(--pallette-white);
+
+  &__input {
+    padding-bottom: rem(12);
+    color: inherit;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    @include placeholder {
+      opacity: 0;
+    }
+
+    &:focus~#{$this}__label,
+    &:not(:placeholder-shown)~#{$this}__label {
+      transform: translateY(rem(-20));
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transform-origin: 0 0;
+    opacity: 0.5;
+    transition: transform var(--transition1);
+  }
+}

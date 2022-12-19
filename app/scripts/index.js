@@ -2,6 +2,7 @@
 
 import Accordion from './accordion';
 import BurgerMenu from './burgerMenu';
+import CallbackSlider from './callbackSlider';
 import ProductSlider from './productSlider';
 import SculptureSlider from './sculptureSlider';
 
@@ -15,4 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   SculptureSlider();
 
   ProductSlider();
+
+  CallbackSlider();
 });

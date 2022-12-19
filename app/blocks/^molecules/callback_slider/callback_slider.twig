@@ -1,0 +1,8 @@
+<div class="swiper callback-slider {{ callback_slider.class }}">
+  <div class="swiper-pagination"></div>
+  <div class="swiper-wrapper callback-slider__wrap">
+    {% for item in callback_slider.items %}
+      <div class="swiper-slide" style="{{ item.attrs }}"></div>
+    {% endfor %}
+  </div>
+</div>

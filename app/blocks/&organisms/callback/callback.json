@@ -1,0 +1,53 @@
+{
+  "callback": {
+    "slider": {
+      "items": [{
+        "attrs": "background-image: url('./assets/images/substract.png'), url('./assets/images/substract.png'), url('./assets/images/callback/01.png');"
+      }, {
+        "attrs": "background-image: url('./assets/images/substract.png'), url('./assets/images/substract.png'), url('./assets/images/callback/02.png');"
+      }, {
+        "attrs": "background-image: url('./assets/images/substract.png'), url('./assets/images/substract.png'), url('./assets/images/callback/03.png');"
+      }, {
+        "attrs": "background-image: url('./assets/images/substract.png'), url('./assets/images/substract.png'), url('./assets/images/callback/04.png');"
+      }, {
+        "attrs": "background-image: url('./assets/images/substract.png'), url('./assets/images/substract.png'), url('./assets/images/callback/05.png');"
+      }, {
+        "attrs": "background-image: url('./assets/images/substract.png'), url('./assets/images/substract.png'), url('./assets/images/callback/06.png');"
+      }, {
+        "attrs": "background-image: url('./assets/images/substract.png'), url('./assets/images/substract.png'), url('./assets/images/callback/07.png');"
+      }, {
+        "attrs": "background-image: url('./assets/images/substract.png'), url('./assets/images/substract.png'), url('./assets/images/callback/08.png');"
+      }]
+    },
+    "title": {
+      "text": "Заказать скульптуру по&nbsp;индивидуальному решению"
+    },
+    "descr": "Задача организации, в особенности же реализация намеченных плановых заданий влечет за собой процесс.",
+    "form": {
+      "type": "callback",
+      "items": [{
+        "id": "input_name_id",
+        "fake_placeholder": "Имя*",
+        "placeholder": "Имя",
+        "name": "name"
+      }, {
+        "id": "input_email_id",
+        "fake_placeholder": "Адрес электронной почты*",
+        "placeholder": "Адрес электронной почты",
+        "name": "email",
+        "type": "email"
+      }, {
+        "id": "input_phone_id",
+        "fake_placeholder": "Телефон*",
+        "placeholder": "Телефон",
+        "name": "phone",
+        "type": "number"
+      }, {
+        "id": "input_comment_id",
+        "fake_placeholder": "Комментарий*",
+        "placeholder": "Комментарий",
+        "name": "comment"
+      }]
+    }
+  }
+}

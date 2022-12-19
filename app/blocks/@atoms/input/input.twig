@@ -1,0 +1,15 @@
+{% set type = input.type|default('text') %}
+
+<div class="input-block {{ input.class }}">
+  <input
+    class="input input-block__input"
+    id="{{ input.id }}"
+    type="{{ input_type }}"
+    placeholder="{{ input.placeholder }}"
+    name="{{ input.name }}"
+    {{ input.attrs }}
+  >
+  <label class="input-block__label" for="{{ input.id }}">
+    {{ input.fake_placeholder }}
+  </label>
+</div>
