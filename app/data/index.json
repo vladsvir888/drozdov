@@ -3,5 +3,88 @@
     "text": "Home",
     "link": "home"
   }],
-  "title_page": "Test title"
+  "title_page": "Test title",
+  "modal": {
+    "buy": {
+      "class": "modal-buy",
+      "title": {
+        "level": 2,
+        "text": "Купить скульптуру",
+        "class": "modal__title"
+      },
+      "text": "Чтобы приобрести скульптуру, Вы можете оплатить покупку онлайн на сайте или заказать консультацию. С Вами свяжутся в ближайшее время.",
+      "form": {
+        "class": "form--modal",
+        "type": "modal",
+        "items": [{
+          "id": "input_name_id",
+          "fake_placeholder": "Имя*",
+          "placeholder": "Имя",
+          "name": "name",
+          "attrs": "data-pristine-required-message='Поле заполнено некорректно' required"
+        }, {
+          "id": "input_phone_id",
+          "fake_placeholder": "Телефон*",
+          "placeholder": "Телефон",
+          "name": "phone",
+          "type": "number",
+          "attrs": "data-pristine-required-message='Поле заполнено некорректно' required"
+        }, {
+          "id": "input_email_id",
+          "fake_placeholder": "Адрес электронной почты*",
+          "placeholder": "Адрес электронной почты",
+          "name": "email",
+          "type": "email",
+          "attrs": "data-pristine-required-message='Поле заполнено некорректно' data-pristine-email-message='Введите правильный email' required"
+        }],
+        "btns": [{
+          "text": "Заказать"
+        }, {
+          "text": "Оплатить онлайн"
+        }]
+      }
+    },
+    "ask": {
+      "class": "modal-ask",
+      "title": {
+        "level": 2,
+        "text": "Задать свой вопрос",
+        "class": "modal__title modal__title--ask"
+      },
+      "form": {
+        "class": "form--modal",
+        "type": "modal",
+        "items": [{
+          "id": "input_name_id",
+          "fake_placeholder": "Имя*",
+          "placeholder": "Имя",
+          "name": "name",
+          "attrs": "data-pristine-required-message='Поле заполнено некорректно' required"
+        }, {
+          "id": "input_phone_id",
+          "fake_placeholder": "Телефон*",
+          "placeholder": "Телефон",
+          "name": "phone",
+          "type": "number",
+          "attrs": "data-pristine-required-message='Поле заполнено некорректно' required"
+        }, {
+          "id": "input_email_id",
+          "fake_placeholder": "Адрес электронной почты*",
+          "placeholder": "Адрес электронной почты",
+          "name": "email",
+          "type": "email",
+          "attrs": "data-pristine-required-message='Поле заполнено некорректно' data-pristine-email-message='Введите правильный email' required"
+        }, {
+          "id": "input_comment_id",
+          "fake_placeholder": "Вопрос*",
+          "placeholder": "Вопрос",
+          "name": "comment",
+          "attrs": "data-pristine-required-message='Поле заполнено некорректно' required"
+        }],
+        "btns": [{
+          "text": "Отправить"
+        }]
+      }
+    }
+  }
 }

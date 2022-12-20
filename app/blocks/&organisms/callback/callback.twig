@@ -1,4 +1,4 @@
-<section class="callback">
+<section id="callback" class="callback">
 	<div class="container">
     {% view "^callback_slider" with {
       callback_slider: callback.slider|merge({
@@ -20,10 +20,10 @@
         </p>
       </div>
 
-      <div class="callback__item">
+      <div class="callback__item callback__block-form">
         {% view "^form" with {
           form: callback.form|merge({
-            class: "callback__form"
+            class: "form--callback"
           })
         } %}
       </div>

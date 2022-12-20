@@ -1,4 +1,4 @@
-<section class="faq">
+<section id="faq" class="faq">
   <div class="container">
     {% view "@title" with {
       title: faq.title|merge({
@@ -12,7 +12,7 @@
           <p class="faq__callback-descr">
             {{ faq.callback_block.descr }}
           </p>
-          <button class="btn faq__callback-btn">
+          <button class="btn faq__callback-btn js-modal-btn" data-modal="ask">
             {{ faq.callback_block.btn.text }}
           </button>
         </aside>

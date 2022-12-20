@@ -8,7 +8,12 @@
   letter-spacing: -0.02em;
   border-bottom: 0.1rem solid var(--pallette-white);
 
+  &--error {
+    border-color: var(--pallette-bittersweet);
+  }
+
   &__input {
+    width: 100%;
     padding-bottom: rem(12);
     color: inherit;
     outline: none;
@@ -34,4 +39,23 @@
     opacity: 0.5;
     transition: transform var(--transition1);
   }
+
+  &__message {
+    @include font-size(12, 18);
+    font-family: var(--ff1);
+    color: var(--pallette-bittersweet);
+    position: absolute;
+    left: 0;
+    bottom: rem(-20);
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }

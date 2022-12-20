@@ -29,24 +29,28 @@
         "id": "input_name_id",
         "fake_placeholder": "Имя*",
         "placeholder": "Имя",
-        "name": "name"
+        "name": "name",
+        "attrs": "data-pristine-required-message='Поле заполнено некорректно' required"
       }, {
         "id": "input_email_id",
         "fake_placeholder": "Адрес электронной почты*",
         "placeholder": "Адрес электронной почты",
         "name": "email",
-        "type": "email"
+        "type": "email",
+        "attrs": "data-pristine-required-message='Поле заполнено некорректно' data-pristine-email-message='Введите правильный email' required"
       }, {
         "id": "input_phone_id",
         "fake_placeholder": "Телефон*",
         "placeholder": "Телефон",
         "name": "phone",
-        "type": "number"
+        "type": "number",
+        "attrs": "data-pristine-required-message='Поле заполнено некорректно' required"
       }, {
         "id": "input_comment_id",
         "fake_placeholder": "Комментарий*",
         "placeholder": "Комментарий",
-        "name": "comment"
+        "name": "comment",
+        "attrs": "data-pristine-required-message='Поле заполнено некорректно' required"
       }]
     }
   }

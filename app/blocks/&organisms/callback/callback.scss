@@ -9,15 +9,44 @@
   &__inner {
     display: flex;
 
+    @include media('900', max) {
+      flex-direction: column;
+    }
+
     >* {
       &:not(:last-child) {
         margin-right: rem(210);
+
+        @include media('1280', max) {
+          margin-right: rem(105);
+        }
+
+        @include media('900', max) {
+          margin-right: 0;
+          margin-bottom: rem(50);
+        }
       }
     }
   }
 
   &__block-text {
-    max-width: rem(279);
+    width: 20%;
+
+    @include media('1280', max) {
+      width: 40%;
+    }
+
+    @include media('900', max) {
+      width: 100%;
+    }
+  }
+
+  &__block-form {
+    width: 60%;
+
+    @include media('900', max) {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -35,27 +64,9 @@
 
   &__slider {
     margin-bottom: rem(67);
-  }
 
-  &__form {
-    max-width: rem(838);
-
-    .form__header {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: rem(36);
-      margin-bottom: rem(32);
-    }
-
-    .input-block {
-      width: rem(398);
-    }
-
-    .form__footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+    @include media('500', max) {
+      margin-bottom: rem(33);
     }
   }
 }

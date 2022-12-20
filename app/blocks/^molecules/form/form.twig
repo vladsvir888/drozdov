@@ -15,5 +15,27 @@
 
       <button class="btn form__btn">Отправить</button>
     </div>
+  {% elseif form.type == 'modal' %}
+    <div class="form__header">
+      {% for item in form.items %}
+        {% view "@input" with {
+          input: item
+        } %}
+      {% endfor %}
+    </div>
+
+    <div class="form__footer">
+      <p class="form__note">
+        Нажимая кнопку “отправить”, я соглашаюсь с <a href="#">условиями обработки персональных данных </a>
+      </p>
+
+      <div class="form__btns">
+        {% for btn in form.btns %}
+          <button class="btn form__btn">
+            {{ btn.text }}
+          </button>
+        {% endfor %}
+      </div>
+    </div>
   {% endif %}
 </form>

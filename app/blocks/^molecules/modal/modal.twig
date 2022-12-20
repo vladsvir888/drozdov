@@ -1,0 +1,28 @@
+<div class="modal {{ modal.class }}">
+  {% if modal.title %}
+    {% view "@title" with {
+      title: modal.title
+    } %}
+  {% endif %}
+
+  {% if modal.text %}
+    <p class="modal__text">
+      {{ modal.text }}
+    </p>
+  {% endif %}
+
+  {% if modal.form %}
+    {% view "^form" with {
+      form: modal.form
+    } %}
+  {% endif %}
+
+  <button class="btn modal__close">
+    {% view "@icon" with {
+      icon: {
+        class: "modal__close-icon",
+        name: "sprite-mono.svg#close",
+      }
+    } %}
+  </button>
+</div>
