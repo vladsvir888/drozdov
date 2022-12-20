@@ -1,0 +1,17 @@
+<div class="promo">
+  <div class="container">
+    <div class="promo__inner">
+      {% view "@title" with {
+        title: promo.first_screen.title|merge({
+          class: "promo__title"
+        })
+      } %}
+
+      {% view "@image" with {
+        image: promo.first_screen.image|merge({
+          lazy: false
+        })
+      } %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+{
+  "promo": {
+    "first_screen": {
+      "title": {
+        "text": "<span>Алексей</span> Дроздов"
+      },
+      "image": {
+        "name": "promo/01.jpg"
+      }
+    }
+  }
+}

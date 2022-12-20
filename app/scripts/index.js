@@ -1,6 +1,7 @@
 // import LazyLoad from 'vanilla-lazyload';
 
 import Accordion from './accordion';
+import Animation from './animation';
 import BurgerMenu from './burgerMenu';
 import CallbackSlider from './callbackSlider';
 import Form from './form';
@@ -21,4 +22,5 @@ document.addEventListener('DOMContentLoaded', () => {
   Header();
   Form();
   Modal();
+  Animation();
 });

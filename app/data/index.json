@@ -3,6 +3,11 @@
     "text": "Home",
     "link": "home"
   }],
+  "meta": {
+    "html_lang": "ru",
+    "title": "Алексей Дроздов - каждый может найти своего медведя",
+    "description": "Алексей Дроздов - каждый может найти своего медведя"
+  },
   "title_page": "Test title",
   "modal": {
     "buy": {

@@ -50,10 +50,24 @@
     text-align: right;
 
     &-link {
-      text-decoration: underline;
+      position: relative;
+      text-decoration: none;
+
+      &::before {
+        position: absolute;
+        bottom: rem(-1);
+        left: 0;
+        width: 100%;
+        height: rem(1);
+        content: '';
+        background-color: var(--pallette-white);
+        transition: opacity var(--transition1);
+      }
 
       &:hover {
-        text-decoration: none;
+        &::before {
+          opacity: 0;
+        }
       }
     }
   }

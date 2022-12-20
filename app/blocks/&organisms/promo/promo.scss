@@ -1,0 +1,31 @@
+.promo {
+  min-height: 100vh;
+
+  &__inner {
+    position: relative;
+  }
+
+  &__title {
+    // @include font-size(170, 204);
+    @include font-size(170, 170);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    // position: fixed;
+    // bottom: rem(57);
+    // bottom: 57px;
+    // z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+    bottom: 57px;
+
+    span {
+      @include font-size(48, 53);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+    }
+  }
+}
