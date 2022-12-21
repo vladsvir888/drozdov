@@ -1,15 +1,27 @@
 <div class="promo">
   <div class="container">
-    <div class="promo__inner">
-      {% view "@title" with {
-        title: promo.first_screen.title|merge({
-          class: "promo__title"
+    <div class="promo__wrap">
+      {% view "@image" with {
+        image: promo.first_image|merge({
+          class: "promo__first-img",
+          lazy: false
         })
       } %}
 
+      <p class="promo__text">
+        {{ promo.text }}
+      </p>
+
       {% view "@image" with {
-        image: promo.first_screen.image|merge({
+        image: promo.second_image|merge({
+          class: "promo__second-img",
           lazy: false
+        })
+      } %}
+
+      {% view "@title" with {
+        title: promo.title|merge({
+          class: "promo__title"
         })
       } %}
     </div>

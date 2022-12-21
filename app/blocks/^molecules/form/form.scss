@@ -6,7 +6,6 @@
 
     &-link {
       position: relative;
-      display: block;
       text-decoration: none;
       color: inherit;
       transition: color var(--transition1);
@@ -119,6 +118,10 @@
 
   .form__note {
     max-width: rem(276);
+
+    &-link {
+      display: block;
+    }
   }
 
   .form__btns {

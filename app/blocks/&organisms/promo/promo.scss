@@ -1,31 +1,45 @@
 .promo {
-  min-height: 100vh;
+  height: 100vh;
+  opacity: 1;
+  background-color: var(--pallette-black);
 
-  &__inner {
+  &__wrap {
     position: relative;
   }
 
   &__title {
     // @include font-size(170, 204);
-    @include font-size(170, 170);
+    @include font-size(170, 130);
     font-weight: 600;
     letter-spacing: -0.02em;
     text-transform: uppercase;
-    // position: fixed;
-    // bottom: rem(57);
-    // bottom: 57px;
-    // z-index: 10;
+    position: absolute;
+    top: 600px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-
-    position: absolute;
-    bottom: 57px;
 
     span {
       @include font-size(48, 53);
       font-weight: 500;
       letter-spacing: -0.03em;
+      margin-left: rem(125);
     }
+  }
+
+  &__second-img {
+    position: absolute;
+    right: 0;
+    top: 120%;
+  }
+
+  &__text {
+    @include font-size(14, 20);
+    font-weight: 300;
+    font-family: var(--ff2);
+    max-width: rem(396);
+    position: absolute;
+    left: 15%;
+    top: 150%;
+    opacity: 0.2;
   }
 }
