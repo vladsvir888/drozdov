@@ -9,9 +9,11 @@ const scrollToSection = () => {
 
       const sectionId = link.dataset.link;
 
-      const section = document.getElementById(sectionId);
+      gsap.to(window, {duration: 1, scrollTo:{ y: `#${sectionId}` }});
 
-      section.scrollIntoView();
+      // const section = document.getElementById(sectionId);
+
+      // section.scrollIntoView();
 
       const burger = document.querySelector('.burger');
 

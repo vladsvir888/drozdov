@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
   SculptureSlider();
   ProductSlider();
   CallbackSlider();
-  scrollToSection();
   Header();
   Form();
   Modal();
   Animation();
+  scrollToSection();
 });
