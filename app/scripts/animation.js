@@ -1,13 +1,17 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+gsap.defaults({
+  ease: "none",
+});
+
 const Animation = () => {
-  const mql = window.matchMedia('(min-width: 1281px)');
+  const mql = window.matchMedia('(min-width: 1201px)');
 
   if (mql.matches) {
-    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
-    gsap.defaults({
-      ease: "none",
-    });
-
     const gt = gsap.timeline();
 
     gt.to(
@@ -68,20 +72,9 @@ const Animation = () => {
       },
       0.5
     );
-    gt.to(
-      ".main",
-      {
-        paddingTop: "50vh",
-      },
-      1
-    );
-    gt.to(
-      ".main",
-      {
-        paddingTop: "0vh",
-      },
-      1.5
-    );
+    gt.to(".section-wrapper", {
+      transform: "translateY(0)"
+    }, 1);
 
     ScrollTrigger.create({
       animation: gt,
@@ -89,9 +82,12 @@ const Animation = () => {
       start: "top top",
       end: "30%",
       scrub: 1,
-      pin: !0,
+      pin: true,
       anticipatePin: 1,
       pinType: "fixed",
+      onUpdate: self => {
+        document.body.dataset['offset'] = self.end;
+      },
     });
   }
 };

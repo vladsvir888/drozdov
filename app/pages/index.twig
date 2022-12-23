@@ -4,12 +4,16 @@
 <main class="main animate-wrapper">
   {% view "&promo" %}
 
-  {% view "&catalog" %}
+  <div class="section-wrapper">
+    {% view "&catalog" %}
 
-  {% view "&callback" %}
+    {% view "&callback" %}
 
-  {% view "&sculpture" %}
+    {% view "&sculpture" %}
 
-  {% view "&faq" %}
+    {% view "&faq" %}
+
+    {% view "&footer" %}
+  </div>
 </main>
 {% endblock %}

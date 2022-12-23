@@ -3,6 +3,9 @@
     <div class="promo__wrap">
       {% view "@image" with {
         image: promo.first_image|merge({
+          picture: {
+            class: "promo__first-picture"
+          },
           class: "promo__first-img",
           lazy: false
         })
@@ -12,18 +15,21 @@
         {{ promo.text }}
       </p>
 
-      {% view "@image" with {
-        image: promo.second_image|merge({
-          class: "promo__second-img",
-          lazy: false
-        })
-      } %}
-
       {% view "@title" with {
         title: promo.title|merge({
           class: "promo__title"
         })
       } %}
     </div>
+
+    {% view "@image" with {
+      image: promo.second_image|merge({
+        picture: {
+          class: "promo__second-picture"
+        },
+        class: "promo__second-img",
+        lazy: false
+      })
+    } %}
   </div>
 </div>

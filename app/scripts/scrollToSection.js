@@ -1,3 +1,8 @@
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin);
+
 const scrollToSection = () => {
   const links = document.querySelectorAll('.js-link');
 
@@ -7,13 +12,17 @@ const scrollToSection = () => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
 
-      const sectionId = link.dataset.link;
+      const sectionId = link.getAttribute('href').slice(1);
 
-      gsap.to(window, {duration: 1, scrollTo:{ y: `#${sectionId}` }});
+      const section = document.getElementById(sectionId);
 
-      // const section = document.getElementById(sectionId);
+      if (document.body.dataset['offset']) {
+        const offset = section.offsetTop + +document.body.dataset['offset'];
 
-      // section.scrollIntoView();
+        gsap.to(window, {duration: 1, scrollTo: { y: offset }});
+      } else {
+        section.scrollIntoView();
+      }
 
       const burger = document.querySelector('.burger');
 

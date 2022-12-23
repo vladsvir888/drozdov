@@ -30,7 +30,8 @@ export const config = {
 
   watch: {
     styles: `${appFolder}/{styles,blocks}/**/*.scss`,
-    templates: `${appFolder}/{pages,blocks}/**/(*.twig|*.json)`,
+    components: `${appFolder}/blocks/**/(*.twig|*.json)`,
+    pages: `${appFolder}/pages/*.twig`,
     scripts: `${appFolder}/{scripts,blocks}/**/*.js`,
     resources: `${appFolder}/resources/**/*`,
     images: `${appFolder}/images/**/*`,

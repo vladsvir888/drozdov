@@ -1,4 +1,6 @@
 .promo {
+  $this: &;
+
   // min-height: 100vh;
   height: 100vh;
   max-height: rem(1000);
@@ -11,13 +13,25 @@
   left: 0;
   z-index: -1;
 
+  @include media('1200', max) {
+    position: static;
+    height: auto;
+    max-height: unset;
+    overflow: unset;
+    padding: rem(20) 0;
+  }
+
   &__container {
+    position: relative;
     height: 100%;
   }
 
   &__wrap {
-    position: relative;
     height: 100%;
+
+    @include media('1200', max) {
+      display: grid;
+    }
   }
 
   &__title {
@@ -36,6 +50,40 @@
       font-weight: 500;
       letter-spacing: -0.03em;
       margin-left: rem(125);
+
+      @include media('500', max) {
+        font-size: rem(24);
+      }
+    }
+
+    @include media('1200', max) {
+      grid-area: 1 / 2;
+      position: static;
+      padding-top: rem(170);
+    }
+
+    @include media('900', max) {
+      padding-top: rem(50);
+      font-size: rem(120);
+      margin: 0 auto;
+    }
+
+    @include media('576', max) {
+      font-size: rem(80);
+    }
+
+    @include media('500', max) {
+      font-size: rem(60);
+    }
+  }
+
+  &__first-picture {
+    @include media('1200', max) {
+      grid-area: 1 / 2;
+    }
+
+    @include media('500', max) {
+      display: none;
     }
   }
 
@@ -46,11 +94,22 @@
     object-position: center bottom;
   }
 
+  &__second-picture {
+    @include media('1200', max) {
+      margin: 0 auto;
+    }
+  }
+
   &__second-img {
     position: absolute;
     right: 0;
     top: 120%;
     height: 100%;
+
+    @include media('1200', max) {
+      position: static;
+      margin: rem(20) auto 0;
+    }
   }
 
   &__text {
@@ -62,5 +121,21 @@
     left: 15%;
     top: 150%;
     opacity: 0.2;
+
+    @include media('1200', max) {
+      position: static;
+      opacity: 1;
+      grid-area: 1 / 2;
+      padding-top: rem(400);
+      padding-bottom: rem(20);
+    }
+
+    @include media('900', max) {
+      padding-top: rem(250);
+    }
+
+    @include media('500', max) {
+      padding-top: rem(180);
+    }
   }
 }

@@ -3,7 +3,11 @@
 {% set image_lazy = image.lazy|default(true) %}
 
 {% if image_lazy %}
-  <picture>
+  <picture
+    {% if image.picture.class %}
+      class="{{ image.picture.class }}"
+    {% endif %}
+  >
     <source
       type="image/avif"
       srcset="./assets/images/pixel.avif"
@@ -25,7 +29,11 @@
     />
   </picture>
 {% else %}
-  <picture>
+  <picture
+    {% if image.picture.class %}
+      class="{{ image.picture.class }}"
+    {% endif %}
+  >
     <source
       type="image/avif"
       srcset="{{ path ~ filename ~ '.avif' }}"
