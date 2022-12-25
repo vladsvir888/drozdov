@@ -76,6 +76,12 @@ const Animation = () => {
       transform: "translateY(0)"
     }, 1);
 
+    // gsap.to('.sculpture__title-child', {
+    //   scrollTrigger: '.sculpture__title-child',
+    //   duration: 0.2,
+    //   transform: "translateY(0)"
+    // });
+
     ScrollTrigger.create({
       animation: gt,
       trigger: ".main",

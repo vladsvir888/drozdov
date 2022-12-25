@@ -25,7 +25,7 @@
   &__copyright {
     grid-column: span 3;
 
-    small {
+    &-small {
       font: inherit;
     }
   }

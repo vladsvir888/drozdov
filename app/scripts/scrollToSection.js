@@ -3,7 +3,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin);
 
-const scrollToSection = () => {
+const ScrollToSection = () => {
   const links = document.querySelectorAll('.js-link');
 
   if (!links.length) return;
@@ -34,4 +34,4 @@ const scrollToSection = () => {
   });
 };
 
-export default scrollToSection;
+export default ScrollToSection;

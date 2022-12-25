@@ -8,10 +8,23 @@
         })
       } %}
 
+      {# <h2 class="title--h2 sculpture__title">
+        <div class="sculpture__title-parent">
+          <div class="sculpture__title-child">СКУЛЬПТУРЫ</div>
+        </div>
+        <div class="sculpture__title-parent">
+          <div class="sculpture__title-child">СРЕДНЕЙ ЦЕНОВОЙ</div>
+        </div>
+        <div class="sculpture__title-parent">
+          <div class="sculpture__title-child">КАТЕГОРИИ</div>
+        </div>
+      </h2> #}
+
       <div class="sculpture__buttons">
         <button class="btn swiper-button-prev sculpture__slider-btn">
           {% view "@icon" with {
             icon: {
+              class: "sculpture__slider-btn-icon",
               name: "sprite-mono.svg#arrow-slider-prev"
             }
           } %}
@@ -19,6 +32,7 @@
         <button class="btn swiper-button-next sculpture__slider-btn">
           {% view "@icon" with {
             icon: {
+              class: "sculpture__slider-btn-icon",
               name: "sprite-mono.svg#arrow-slider-next"
             }
           } %}

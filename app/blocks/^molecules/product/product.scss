@@ -87,7 +87,8 @@
         top: 0;
         bottom: 0;
         border-radius: rem(100);
-        outline: rem(1) solid var(--pallette-white);
+        border: rem(1) solid var(--pallette-white);
+        // outline: rem(1) solid var(--pallette-white);
         content: '';
       }
     }

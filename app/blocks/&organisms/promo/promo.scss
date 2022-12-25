@@ -109,6 +109,7 @@
     @include media('1200', max) {
       position: static;
       margin: rem(20) auto 0;
+      height: auto;
     }
   }
 

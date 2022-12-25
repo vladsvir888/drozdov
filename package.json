@@ -62,7 +62,7 @@
     "core-js": "^3.20.0",
     "gsap": "^3.11.4",
     "pristinejs": "^0.1.9",
-    "sweetalert2": "^11.6.15",
+    "sweetalert2": "^11.4.8",
     "swiper": "^8.3.0",
     "vanilla-lazyload": "^17.8.2"
   }

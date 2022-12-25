@@ -8,7 +8,7 @@ import Form from './form';
 import Header from './header';
 import Modal from './modal';
 import ProductSlider from './productSlider';
-import scrollToSection from './scrollToSection';
+import ScrollToSection from './scrollToSection';
 import SculptureSlider from './sculptureSlider';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,5 +22,5 @@ document.addEventListener('DOMContentLoaded', () => {
   Form();
   Modal();
   Animation();
-  scrollToSection();
+  ScrollToSection();
 });
