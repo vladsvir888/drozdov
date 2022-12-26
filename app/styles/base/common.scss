@@ -59,11 +59,11 @@ button {
 
 html {
   height: 100%;
+  scrollbar-color: var(--pallette-silver) transparent;
+  scrollbar-width: thin;
 }
 
 body {
-  // @include flex-column;
-  // height: 100%;
   font-family: var(--ff1);
   color: var(--pallette-white);
   background-color: var(--pallette-black);
@@ -73,10 +73,6 @@ body {
 .container {
   @include container;
 }
-
-// .header {
-//   flex-shrink: 0;
-// }
 
 .main {
   width: 100%;
@@ -94,11 +90,6 @@ body {
     transform: unset;
   }
 }
-
-// .footer {
-//   flex-shrink: 0;
-//   margin-top: auto;
-// }
 
 .visually-hidden {
   position: absolute;

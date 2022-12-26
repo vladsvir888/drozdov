@@ -1,7 +1,6 @@
 .promo {
   $this: &;
 
-  // min-height: 100vh;
   height: 100vh;
   max-height: rem(1000);
   overflow: hidden;
@@ -35,14 +34,12 @@
   }
 
   &__title {
-    // @include font-size(170, 204);
-    // @include font-size(170, 130);
     @include font-size(170, 170);
     font-weight: 600;
     letter-spacing: -0.02em;
     text-transform: uppercase;
     position: absolute;
-    top: 70%;
+    top: 73%;
     display: flex;
     flex-direction: column;
 
@@ -51,22 +48,12 @@
       font-weight: 500;
       letter-spacing: -0.03em;
       margin-left: rem(125);
+      margin-bottom: rem(-16);
 
       @include media('500', max) {
         font-size: rem(24);
       }
     }
-
-    // span {
-    //   @include font-size(48, 53);
-    //   font-weight: 500;
-    //   letter-spacing: -0.03em;
-    //   margin-left: rem(125);
-
-    //   @include media('500', max) {
-    //     font-size: rem(24);
-    //   }
-    // }
 
     @include media('1200', max) {
       grid-area: 1 / 2;

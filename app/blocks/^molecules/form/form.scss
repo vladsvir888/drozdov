@@ -25,16 +25,16 @@
         color: var(--pallette-white);
 
         &::before {
-            background-color: var(--pallette-white);
+          background-color: var(--pallette-white);
         }
       }
     }
   }
 
   &__btn {
+    @include font-size(16, 26);
     position: relative;
     z-index: 10;
-    @include font-size(16, 26);
     text-align: center;
     font-family: var(--ff2);
     padding: rem(10) rem(30);

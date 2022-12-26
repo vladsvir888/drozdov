@@ -2,7 +2,7 @@
   <div class="swiper-wrapper">
     {% for item in item.slides %}
       <div class="swiper-slide">
-        <article class="product-slider__card">
+        <article class="product-slider__card js-modal-btn" data-modal="buy">
           {% view "@image" with {
             image: item.image|merge({
               class: "product-slider__img",
@@ -22,12 +22,6 @@
               {{ item.content.text }}
             </p>
           </div>
-          <button class="btn product-slider__btn js-modal-btn" data-modal="buy">
-            <span>Купить</span>
-            <span>
-              {{ item.content.price }}
-            </span>
-          </button>
         </article>
       </div>
     {% endfor %}
