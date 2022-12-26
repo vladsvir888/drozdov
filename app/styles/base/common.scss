@@ -178,3 +178,21 @@ body {
     background-image: url("../assets/images/faq_bears/01.png");
   }
 }
+
+.animate-title {
+  &__parent {
+    overflow: hidden;
+
+    @include media('1200', max) {
+      overflow: unset;
+    }
+  }
+
+  &__child {
+    transform: translateY(rem(150));
+
+    @include media('1200', max) {
+      transform: unset;
+    }
+  }
+}

@@ -1,11 +1,13 @@
 <section id="faq" class="faq">
   <div class="container">
-    {% view "@title" with {
-      title: faq.title|merge({
-        level: 2,
-        class: "title--h2 faq__title"
-      })
-    } %}
+    <h2 class="title--h2 faq__title animate-title">
+      <div class="animate-title__parent">
+        <div class="animate-title__child">Часто задаваемые</div>
+      </div>
+      <div class="animate-title__parent">
+        <div class="animate-title__child">вопросы</div>
+      </div>
+    </h2>
     <div class="faq__inner">
       <div class="faq__start">
         <aside class="faq__callback">

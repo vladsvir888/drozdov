@@ -15,11 +15,20 @@
         {{ promo.text }}
       </p>
 
-      {% view "@title" with {
+      {# {% view "@title" with {
         title: promo.title|merge({
           class: "promo__title"
         })
-      } %}
+      } %} #}
+
+      <h2 class="title promo__title animate-title">
+        <div class="animate-title__parent">
+          <div class="animate-title__child">Алексей</div>
+        </div>
+        <div class="animate-title__parent">
+          <div class="animate-title__child">Дроздов</div>
+        </div>
+      </h2>
     </div>
 
     {% view "@image" with {

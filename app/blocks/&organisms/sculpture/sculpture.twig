@@ -1,25 +1,17 @@
 <section class="sculpture">
   <div class="container">
     <div class="sculpture__inner">
-      {% view "@title" with {
-        title: sculpture.title|merge({
-          level: 2,
-          class: "title--h2 sculpture__title"
-        })
-      } %}
-
-      {# <h2 class="title--h2 sculpture__title">
-        <div class="sculpture__title-parent">
-          <div class="sculpture__title-child">СКУЛЬПТУРЫ</div>
+      <h2 class="title--h2 sculpture__title animate-title">
+        <div class="animate-title__parent">
+          <div class="animate-title__child">СКУЛЬПТУРЫ</div>
         </div>
-        <div class="sculpture__title-parent">
-          <div class="sculpture__title-child">СРЕДНЕЙ ЦЕНОВОЙ</div>
+        <div class="animate-title__parent">
+          <div class="animate-title__child">СРЕДНЕЙ ЦЕНОВОЙ</div>
         </div>
-        <div class="sculpture__title-parent">
-          <div class="sculpture__title-child">КАТЕГОРИИ</div>
+        <div class="animate-title__parent">
+          <div class="animate-title__child">КАТЕГОРИИ</div>
         </div>
-      </h2> #}
-
+      </h2>
       <div class="sculpture__buttons">
         <button class="btn swiper-button-prev sculpture__slider-btn">
           {% view "@icon" with {

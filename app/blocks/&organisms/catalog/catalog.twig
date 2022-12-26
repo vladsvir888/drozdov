@@ -1,11 +1,24 @@
 <section id="catalog" class="catalog">
   <div class="container">
-    {% view "@title" with {
+    {# {% view "@title" with {
       title: catalog.title|merge({
         level: 2,
         class: "title--h2 catalog__title"
       })
-    } %}
+    } %} #}
+
+    <h2 class="title--h2 catalog__title animate-title">
+      <div class="animate-title__parent">
+        <div class="animate-title__child">
+          КАЖДЫЙ МОЖЕТ НАЙТИ
+        </div>
+      </div>
+      <div class="animate-title__parent">
+        <div class="animate-title__child">
+          СВОЕГО МЕДВЕДЯ
+        </div>
+      </div>
+    </h2>
 
     <p class="catalog__text">
       {{ catalog.text }}

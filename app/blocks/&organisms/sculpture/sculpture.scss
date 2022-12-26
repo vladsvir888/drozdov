@@ -23,14 +23,7 @@
 
   &__title {
     max-width: rem(751);
-
-    // &-parent {
-    //   overflow: hidden;
-    // }
-
-    // &-child {
-    //   transform: translateY(rem(100));
-    // }
+    line-height: 1.1;
 
     @include media('767', max) {
       margin-bottom: rem(40);

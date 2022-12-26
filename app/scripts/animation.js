@@ -14,6 +14,35 @@ const Animation = () => {
   if (mql.matches) {
     const gt = gsap.timeline();
 
+    function animateHeadings(selectors) {
+      if (!selectors.length) return;
+
+      selectors.forEach(selector => {
+        let delay = 0;
+        const headingItems = document.querySelectorAll(`${selector} .animate-title__child`);
+
+        headingItems.forEach((item, index) => {
+          index += 1;
+
+          const className = `${selector} .animate-title__parent:nth-child(${index}) .animate-title__child`;
+
+          gsap.to(className, {
+            scrollTrigger: {
+              trigger: className,
+              // markers: true,
+              start: "top bottom"
+            },
+            transform: "translateY(0)",
+            delay: delay,
+            duration: 0.5,
+            ease: "power1.out"
+          });
+
+          delay += 0.35;
+        });
+      });
+    }
+
     gt.to(
       ".promo__title",
       {
@@ -69,18 +98,15 @@ const Animation = () => {
       ".promo__first-img",
       {
         opacity: "0",
+        onComplete: () => {
+          animateHeadings(['.catalog__title'])
+        }
       },
       0.5
     );
     gt.to(".section-wrapper", {
       transform: "translateY(0)"
     }, 1);
-
-    // gsap.to('.sculpture__title-child', {
-    //   scrollTrigger: '.sculpture__title-child',
-    //   duration: 0.2,
-    //   transform: "translateY(0)"
-    // });
 
     ScrollTrigger.create({
       animation: gt,
@@ -92,8 +118,20 @@ const Animation = () => {
       anticipatePin: 1,
       pinType: "fixed",
       onUpdate: self => {
-        document.body.dataset['offset'] = self.end;
+        document.body.dataset.offset = self.end;
       },
+      onEnter: () => {
+        animateHeadings(['.promo__title']);
+      },
+      onLeave: self => {
+        if (document.body.dataset.animationEnd) return;
+
+        document.body.dataset.animationEnd = !self.isActive;
+
+        setTimeout(() => {
+          animateHeadings(['.faq__title', '.sculpture__title']);
+        }, 1000)
+      }
     });
   }
 };
