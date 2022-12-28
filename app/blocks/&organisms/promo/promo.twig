@@ -15,14 +15,14 @@
         {{ promo.text }}
       </p>
 
-      <h2 class="title promo__title animate-title">
+      <h1 class="title promo__title animate-title">
         <div class="animate-title__parent">
-          <div class="animate-title__child">Алексей</div>
+          <div class="animate-title__child">{{ promo.title.text_1 }}</div>
         </div>
         <div class="animate-title__parent">
-          <div class="animate-title__child">Дроздов</div>
+          <div class="animate-title__child">{{ promo.title.text_2 }}</div>
         </div>
-      </h2>
+      </h1>
     </div>
 
     {% view "@image" with {

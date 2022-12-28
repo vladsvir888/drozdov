@@ -1,7 +1,8 @@
 {
   "promo": {
     "title": {
-      "text": "<span>Алексей</span> Дроздов"
+      "text_1": "Алексей",
+      "text_2": "Дроздов"
     },
     "first_image": {
       "name": "promo/01.jpg"
