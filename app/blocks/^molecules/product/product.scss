@@ -163,49 +163,52 @@
   &__price {
     @include font-size(16, 26);
     font-family: var(--ff2);
-    margin-bottom: rem(10);
-  }
 
-  &__content-btn {
-    display: none;
-    @include font-size(16, 16);
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-    font-family: var(--ff2);
-    color: var(--pallette-silver);
-    transition: color var(--transition1);
-
-    @include media('1200', max) {
-      @include flex-center-y;
-    }
-
-    @include media('500', max) {
-      font-size: rem(12);
-    }
-
-    &:hover {
-      color: var(--pallette-white);
-
-      #{$this}__content {
-        &-icon {
-          transform: rotate(90deg);
-          stroke: var(--pallette-white);
-        }
-      }
+    &:not(:last-child) {
+      margin-bottom: rem(10);
     }
   }
 
-  &__content-icon {
-    margin-left: rem(8);
-    width: rem(16);
-    height: rem(16);
-    flex-shrink: 0;
-    stroke: var(--pallette-silver);
-    transition: transform var(--transition1), stroke var(--transition1);
+  // &__content-btn {
+  //   display: none;
+  //   @include font-size(16, 16);
+  //   letter-spacing: -0.03em;
+  //   text-transform: uppercase;
+  //   font-family: var(--ff2);
+  //   color: var(--pallette-silver);
+  //   transition: color var(--transition1);
 
-    @include media('500', max) {
-      width: rem(10);
-      height: rem(10);
-    }
-  }
+  //   @include media('1200', max) {
+  //     @include flex-center-y;
+  //   }
+
+  //   @include media('500', max) {
+  //     font-size: rem(12);
+  //   }
+
+  //   &:hover {
+  //     color: var(--pallette-white);
+
+  //     #{$this}__content {
+  //       &-icon {
+  //         transform: rotate(90deg);
+  //         stroke: var(--pallette-white);
+  //       }
+  //     }
+  //   }
+  // }
+
+  // &__content-icon {
+  //   margin-left: rem(8);
+  //   width: rem(16);
+  //   height: rem(16);
+  //   flex-shrink: 0;
+  //   stroke: var(--pallette-silver);
+  //   transition: transform var(--transition1), stroke var(--transition1);
+
+  //   @include media('500', max) {
+  //     width: rem(10);
+  //     height: rem(10);
+  //   }
+  // }
 }
