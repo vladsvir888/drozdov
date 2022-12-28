@@ -52,6 +52,7 @@
 
       @include media('500', max) {
         font-size: rem(24);
+        margin-bottom: 0;
       }
     }
 

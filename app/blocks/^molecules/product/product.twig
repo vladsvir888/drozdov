@@ -5,6 +5,9 @@
         <article class="product-slider__card js-modal-btn" data-modal="buy">
           {% view "@image" with {
             image: item.image|merge({
+              picture: {
+                class: "product-slider__picture"
+              },
               class: "product-slider__img",
               lazy: false,
               attrs: "loading='lazy'"
@@ -12,7 +15,7 @@
           } %}
 
           <div class="product-slider__content">
-            <h3 class="product-slider__title animate-title">
+            <h3 class="product-slider__title">
               {{ item.content.title }}
             </h3>
             <p class="product-slider__size">
@@ -21,6 +24,18 @@
             <p class="product-slider__text">
               {{ item.content.text }}
             </p>
+            <p class="product-slider__price">
+              {{ item.content.price }}
+            </p>
+            <button class="btn product-slider__content-btn">
+              Купить
+              {% view "@icon" with {
+                icon: {
+                  class: "product-slider__content-icon",
+                  name: "sprite-mono.svg#arrow"
+                }
+              } %}
+            </button>
           </div>
         </article>
       </div>

@@ -27,6 +27,7 @@
 
     @include media('767', max) {
       margin-bottom: rem(40);
+      align-self: flex-start;
     }
   }
 

@@ -3,10 +3,12 @@
 
   background-color: var(--pallette-black);
 
+  &__picture {
+    cursor: url('../assets/images/cursor.svg'), auto;
+  }
+
   &:hover,
   &:focus-within {
-    cursor: url('../assets/images/cursor.svg'), auto;
-
     .swiper-pagination {
       transform: translateY(0);
     }
@@ -42,6 +44,10 @@
       flex-direction: column;
       justify-content: unset;
       align-items: flex-end;
+    }
+
+    @include media('1200', max) {
+      transform: translateY(0);
     }
 
     @include media('576', max) {
@@ -100,13 +106,16 @@
     left: rem(24);
     z-index: 1;
     max-width: rem(316);
-    transform: translateY(rem(103));
+    transform: translateY(rem(160));
     transition: transform var(--transition1);
+
+    @include media('1200', max) {
+      transform: unset;
+    }
 
     @include media('576', max) {
       left: rem(15);
       max-width: rem(220);
-      transform: translateY(rem(85));
     }
   }
 
@@ -140,6 +149,63 @@
 
     @include media('576', max) {
       font-size: rem(10);
+    }
+  }
+
+  &__text {
+    margin-bottom: rem(18);
+
+    @include media('500', max) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__price {
+    @include font-size(16, 26);
+    font-family: var(--ff2);
+    margin-bottom: rem(10);
+  }
+
+  &__content-btn {
+    display: none;
+    @include font-size(16, 16);
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    font-family: var(--ff2);
+    color: var(--pallette-silver);
+    transition: color var(--transition1);
+
+    @include media('1200', max) {
+      @include flex-center-y;
+    }
+
+    @include media('500', max) {
+      font-size: rem(12);
+    }
+
+    &:hover {
+      color: var(--pallette-white);
+
+      #{$this}__content {
+        &-icon {
+          transform: rotate(90deg);
+          stroke: var(--pallette-white);
+        }
+      }
+    }
+  }
+
+  &__content-icon {
+    margin-left: rem(8);
+    width: rem(16);
+    height: rem(16);
+    flex-shrink: 0;
+    stroke: var(--pallette-silver);
+    transition: transform var(--transition1), stroke var(--transition1);
+
+    @include media('500', max) {
+      width: rem(10);
+      height: rem(10);
     }
   }
 }

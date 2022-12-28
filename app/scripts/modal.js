@@ -17,6 +17,9 @@ const Modal = () => {
           showConfirmButton: false,
           html: modalAsk,
           width: '46.125rem',
+          showClass: {
+            popup: 'animate__animated animate__fadeIn'
+          },
           customClass: {
             container: 'custom-modal'
           }
@@ -26,6 +29,9 @@ const Modal = () => {
           showConfirmButton: false,
           html: modalBuy,
           width: '46.125rem',
+          showClass: {
+            popup: 'animate__animated animate__fadeIn'
+          },
           customClass: {
             container: 'custom-modal'
           }
