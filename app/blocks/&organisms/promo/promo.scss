@@ -31,6 +31,11 @@
     @include media('1200', max) {
       display: grid;
     }
+
+    @include media('500', max) {
+      @include flex-column;
+      padding-top: rem(32);
+    }
   }
 
   &__title {
@@ -74,16 +79,14 @@
 
     @include media('500', max) {
       font-size: rem(60);
+      padding-top: rem(30);
+      order: 0;
     }
   }
 
   &__first-picture {
     @include media('1200', max) {
       grid-area: 1 / 2;
-    }
-
-    @include media('500', max) {
-      display: none;
     }
   }
 
@@ -136,7 +139,8 @@
     }
 
     @include media('500', max) {
-      padding-top: rem(180);
+      padding-top: rem(32);
+      order: 1;
     }
   }
 }

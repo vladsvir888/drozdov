@@ -3,10 +3,6 @@
 
   background-color: var(--pallette-black);
 
-  &__picture {
-    cursor: url('../assets/images/cursor.svg'), auto;
-  }
-
   &:hover,
   &:focus-within {
     .swiper-pagination {
@@ -15,15 +11,20 @@
 
     #{$this}__img {
       filter: saturate(100%);
-      transform: scale(1.02);
+      transform: scale(1.05);
     }
 
     #{$this}__content {
       transform: translateY(0);
     }
+
+    #{$this}__btn {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
-  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
   .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0;
   }
@@ -97,13 +98,18 @@
   }
 
   &__img {
-    filter: saturate(50%);
+    filter: saturate(35%);
     transition: filter var(--transition1), transform var(--transition1);
+
+    @include media('576', max) {
+      filter: saturate(100%);
+      opacity: 0.8;
+    }
   }
 
   &__content {
     position: absolute;
-    bottom: rem(19);
+    bottom: rem(22);
     left: rem(24);
     z-index: 1;
     max-width: rem(316);
@@ -117,6 +123,7 @@
     @include media('576', max) {
       left: rem(15);
       max-width: rem(220);
+      bottom: rem(10);
     }
   }
 
@@ -129,7 +136,7 @@
 
     @include media('576', max) {
       font-size: rem(16);
-      margin-bottom: rem(10);
+      margin-bottom: rem(5);
     }
   }
 
@@ -156,8 +163,8 @@
   &__text {
     margin-bottom: rem(18);
 
-    @include media('500', max) {
-      margin-bottom: rem(10);
+    @include media('576', max) {
+      margin-bottom: rem(5);
     }
   }
 
@@ -167,49 +174,77 @@
 
     &:not(:last-child) {
       margin-bottom: rem(10);
+
+      @include media('576', max) {
+        margin-bottom: rem(5);
+      }
     }
   }
 
-  // &__content-btn {
-  //   display: none;
-  //   @include font-size(16, 16);
-  //   letter-spacing: -0.03em;
-  //   text-transform: uppercase;
-  //   font-family: var(--ff2);
-  //   color: var(--pallette-silver);
-  //   transition: color var(--transition1);
+  &__btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: rem(126);
+    height: rem(126);
+    padding: rem(20) rem(15);
+    border-radius: rem(122);
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 0.1rem solid var(--pallette-white);
+    text-transform: uppercase;
+    font-family: var(--ff3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition1);
 
-  //   @include media('1200', max) {
-  //     @include flex-center-y;
-  //   }
+    @include media('1200', max) {
+      display: none;
+    }
+  }
 
-  //   @include media('500', max) {
-  //     font-size: rem(12);
-  //   }
+  &__mobile-btn {
+    display: none;
 
-  //   &:hover {
-  //     color: var(--pallette-white);
+    @include font-size(16, 16);
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    font-family: var(--ff2);
+    color: var(--pallette-silver);
+    transition: color var(--transition1);
 
-  //     #{$this}__content {
-  //       &-icon {
-  //         transform: rotate(90deg);
-  //         stroke: var(--pallette-white);
-  //       }
-  //     }
-  //   }
-  // }
+    @include media('1200', max) {
+      @include flex-center-y;
+    }
 
-  // &__content-icon {
-  //   margin-left: rem(8);
-  //   width: rem(16);
-  //   height: rem(16);
-  //   flex-shrink: 0;
-  //   stroke: var(--pallette-silver);
-  //   transition: transform var(--transition1), stroke var(--transition1);
+    @include media('500', max) {
+      font-size: rem(12);
+    }
 
-  //   @include media('500', max) {
-  //     width: rem(10);
-  //     height: rem(10);
-  //   }
-  // }
+    &:hover {
+      color: var(--pallette-white);
+
+      #{$this}__content {
+        &-icon {
+          transform: rotate(90deg);
+          stroke: var(--pallette-white);
+        }
+      }
+    }
+
+    &-icon {
+      margin-left: rem(8);
+      width: rem(16);
+      height: rem(16);
+      flex-shrink: 0;
+      stroke: var(--pallette-silver);
+      transition: transform var(--transition1), stroke var(--transition1);
+
+      @include media('500', max) {
+        width: rem(10);
+        height: rem(10);
+      }
+    }
+  }
 }

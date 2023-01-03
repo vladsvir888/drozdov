@@ -2,7 +2,7 @@
   <div class="swiper-wrapper">
     {% for item in item.slides %}
       <div class="swiper-slide">
-        <article class="product-slider__card js-modal-btn" data-modal="buy">
+        <article class="product-slider__card">
           {% view "@image" with {
             image: item.image|merge({
               picture: {
@@ -26,16 +26,19 @@
             <p class="product-slider__price">
               {{ item.content.price }}
             </p>
-            {# <button class="btn product-slider__content-btn">
+            <button class="btn product-slider__mobile-btn js-modal-btn" data-modal="buy">
               Купить
               {% view "@icon" with {
                 icon: {
-                  class: "product-slider__content-icon",
+                  class: "product-slider__mobile-btn-icon",
                   name: "sprite-mono.svg#arrow"
                 }
               } %}
-            </button> #}
+            </button>
           </div>
+          <button class="btn product-slider__btn js-modal-btn" data-modal="buy">
+            Купить
+          </button>
         </article>
       </div>
     {% endfor %}

@@ -42,6 +42,7 @@
           "type": "email",
           "attrs": "data-pristine-required-message='Поле заполнено некорректно' data-pristine-email-message='Введите правильный email' required"
         }],
+        "note": "Нажимая кнопку “заказать”, я соглашаюсь с <a class='form__note-link' href='#'>условиями обработки персональных данных</a>",
         "btns": [{
           "text": "Заказать"
         }, {
@@ -86,6 +87,7 @@
           "name": "comment",
           "attrs": "data-pristine-required-message='Поле заполнено некорректно' required"
         }],
+        "note": "Нажимая кнопку “отправить”, я соглашаюсь с <a class='form__note-link' href='#'>условиями обработки персональных данных</a>",
         "btns": [{
           "text": "Отправить"
         }]

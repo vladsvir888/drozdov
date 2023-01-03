@@ -1,4 +1,4 @@
-<form action="/" method="post" class="form {{ form.class }}">
+<form action="/" method="get" class="form {{ form.class }}">
   {% if form.type == 'callback' %}
     <div class="form__header">
       {% for item in form.items %}
@@ -26,7 +26,7 @@
 
     <div class="form__footer">
       <p class="form__note">
-        Нажимая кнопку “отправить”, я соглашаюсь с <a class="form__note-link" href="#">условиями обработки персональных данных</a>
+        {{ form.note }}
       </p>
 
       <div class="form__btns">
