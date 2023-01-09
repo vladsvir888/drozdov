@@ -10,7 +10,7 @@
     }
 
     #{$this}__img {
-      filter: saturate(100%);
+      filter: unset;
       transform: scale(1.05);
     }
 

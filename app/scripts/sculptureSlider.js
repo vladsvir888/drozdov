@@ -3,6 +3,7 @@ import Swiper, { Navigation  } from 'swiper';
 const SculptureSlider = () => {
   new Swiper('.sculpture-slider', {
     loop: true,
+    speed: 1000,
     spaceBetween: 10,
     loop: true,
     loopFillGroupWithBlank: true,
