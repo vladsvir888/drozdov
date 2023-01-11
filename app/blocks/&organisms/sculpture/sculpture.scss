@@ -46,7 +46,7 @@
     transition: box-shadow var(--transition2);
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       #{$this}__slider-btn-icon {
         fill: var(--pallette-black);
       }

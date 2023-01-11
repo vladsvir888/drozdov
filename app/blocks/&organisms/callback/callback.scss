@@ -60,6 +60,17 @@
   &__descr {
     @include font-size(16, 24);
     font-family: var(--ff3);
+
+    a {
+      display: block;
+      color: var(--pallette-white);
+      text-decoration: none;
+      transition: opacity var(--transition1);
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
 
   &__slider {
