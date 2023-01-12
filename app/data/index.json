@@ -32,15 +32,15 @@
           "fake_placeholder": "Телефон*",
           "placeholder": "Телефон",
           "name": "phone",
-          "type": "number",
-          "attrs": "data-pristine-required-message='Поле заполнено некорректно' required"
+          "type": "tel",
+          "attrs": "data-pristine-required-message='Поле заполнено некорректно' data-pristine-my-custom-validator='Введите только числа (от 0 до 9)' required"
         }, {
           "id": "input_email_id",
           "fake_placeholder": "Адрес электронной почты*",
           "placeholder": "Адрес электронной почты",
           "name": "email",
           "type": "email",
-          "attrs": "data-pristine-required-message='Поле заполнено некорректно' data-pristine-email-message='Введите правильный email' required"
+          "attrs": "data-pristine-required-message='Поле заполнено некорректно' data-pristine-email-message='Введите правильный email. Пример: my-email@gmail.com' required"
         }],
         "note": "Нажимая кнопку “заказать”, я соглашаюсь с <a class='form__note-link' href='#'>условиями обработки персональных данных</a>",
         "btns": [{
@@ -71,15 +71,15 @@
           "fake_placeholder": "Телефон*",
           "placeholder": "Телефон",
           "name": "phone",
-          "type": "number",
-          "attrs": "data-pristine-required-message='Поле заполнено некорректно' required"
+          "type": "tel",
+          "attrs": "data-pristine-required-message='Поле заполнено некорректно' data-pristine-my-custom-validator='Введите только числа (от 0 до 9)' required"
         }, {
           "id": "input_email_id",
           "fake_placeholder": "Адрес электронной почты*",
           "placeholder": "Адрес электронной почты",
           "name": "email",
           "type": "email",
-          "attrs": "data-pristine-required-message='Поле заполнено некорректно' data-pristine-email-message='Введите правильный email' required"
+          "attrs": "data-pristine-required-message='Поле заполнено некорректно' data-pristine-email-message='Введите правильный email. Пример: my-email@gmail.com' required"
         }, {
           "id": "input_comment_id",
           "fake_placeholder": "Вопрос*",

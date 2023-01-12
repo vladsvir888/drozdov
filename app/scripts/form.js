@@ -14,6 +14,16 @@ const Form = () => {
 
   if (!forms.length) return;
 
+  Pristine.addValidator("my-custom-validator", function(value) {
+    const regExp = /^\d+$/;
+
+    if (regExp.test(value)) {
+      return true;
+    }
+
+    return false;
+  }, "${1}", 1, false);
+
   forms.forEach(form => {
     const pristine = new Pristine(form, config);
 

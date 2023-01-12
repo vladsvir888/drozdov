@@ -37,14 +37,14 @@
         "placeholder": "Адрес электронной почты",
         "name": "email",
         "type": "email",
-        "attrs": "data-pristine-required-message='Поле заполнено некорректно' data-pristine-email-message='Введите правильный email' required"
+        "attrs": "data-pristine-required-message='Поле заполнено некорректно' data-pristine-email-message='Введите правильный email. Пример: my-email@gmail.com' required"
       }, {
         "id": "input_phone_id",
         "fake_placeholder": "Телефон*",
         "placeholder": "Телефон",
         "name": "phone",
-        "type": "number",
-        "attrs": "data-pristine-required-message='Поле заполнено некорректно' required"
+        "type": "tel",
+        "attrs": "data-pristine-required-message='Поле заполнено некорректно' required data-pristine-my-custom-validator='Введите только числа (от 0 до 9)'"
       }, {
         "id": "input_comment_id",
         "fake_placeholder": "Комментарий*",
