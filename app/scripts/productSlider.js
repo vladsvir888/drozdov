@@ -27,7 +27,7 @@ const ProductSlider = () => {
         renderBullet: (index, className) => {
           return `
             <button class="btn ${className}">
-              <img src="${arr[index]}">
+              <img src="${arr[index]}" alt="">
             </button>
           `;
         }
