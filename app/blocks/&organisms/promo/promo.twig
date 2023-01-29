@@ -7,6 +7,7 @@
             class: "promo__first-picture"
           },
           class: "promo__first-img",
+          alt: "Одна из работ Алексея Дроздова - скульптура медведя.",
           lazy: false
         })
       } %}
@@ -15,13 +16,13 @@
         {{ promo.text }}
       </p>
 
-      <h1 class="title promo__title animate-title">
-        <div class="animate-title__parent">
-          <div class="animate-title__child">{{ promo.title.text_1 }}</div>
-        </div>
-        <div class="animate-title__parent">
-          <div class="animate-title__child">{{ promo.title.text_2 }}</div>
-        </div>
+      <h1 class="title promo__title animate-title" aria-label="Алексей Дроздов">
+        <span class="animate-title__parent">
+          <span class="animate-title__child">{{ promo.title.text_1 }}</span>
+        </span>
+        <span class="animate-title__parent">
+          <span class="animate-title__child">{{ promo.title.text_2 }}</span>
+        </span>
       </h1>
     </div>
 
@@ -31,6 +32,7 @@
           class: "promo__second-picture"
         },
         class: "promo__second-img",
+        alt: "Алексей Дроздов, художник, скульптор, дизайнер и создатель неповторимых коллекций медведей, расписанных вручную.",
         lazy: false
       })
     } %}

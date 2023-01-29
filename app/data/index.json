@@ -22,20 +22,20 @@
         "class": "form--modal",
         "type": "modal",
         "items": [{
-          "id": "input_name_id",
+          "id": "input_name_id_2",
           "fake_placeholder": "Имя*",
           "placeholder": "Имя",
           "name": "name",
           "attrs": "data-pristine-required-message='Поле заполнено некорректно' required"
         }, {
-          "id": "input_phone_id",
+          "id": "input_phone_id_2",
           "fake_placeholder": "Телефон*",
           "placeholder": "Телефон",
           "name": "phone",
           "type": "tel",
           "attrs": "data-pristine-required-message='Поле заполнено некорректно' data-pristine-my-custom-validator='Введите только числа (от 0 до 9)' required"
         }, {
-          "id": "input_email_id",
+          "id": "input_email_id_2",
           "fake_placeholder": "Адрес электронной почты*",
           "placeholder": "Адрес электронной почты",
           "name": "email",

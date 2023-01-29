@@ -13,9 +13,9 @@
           } %}
         </button>
       </h3>
-      <section class="accordion__content" {{ item.content.attrs }}>
+      <div role="region" class="accordion__content" {{ item.content.attrs }}>
         {{ item.content.text }}
-      </section>
+      </div>
     </div>
   {% endfor %}
 </div>

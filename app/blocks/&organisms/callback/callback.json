@@ -26,27 +26,27 @@
     "form": {
       "type": "callback",
       "items": [{
-        "id": "input_name_id",
+        "id": "input_name_id_1",
         "fake_placeholder": "Имя*",
         "placeholder": "Имя",
         "name": "name",
         "attrs": "data-pristine-required-message='Поле заполнено некорректно' required"
       }, {
-        "id": "input_email_id",
+        "id": "input_email_id_1",
         "fake_placeholder": "Адрес электронной почты*",
         "placeholder": "Адрес электронной почты",
         "name": "email",
         "type": "email",
         "attrs": "data-pristine-required-message='Поле заполнено некорректно' data-pristine-email-message='Введите правильный email. Пример: my-email@gmail.com' required"
       }, {
-        "id": "input_phone_id",
+        "id": "input_phone_id_1",
         "fake_placeholder": "Телефон*",
         "placeholder": "Телефон",
         "name": "phone",
         "type": "tel",
         "attrs": "data-pristine-required-message='Поле заполнено некорректно' required data-pristine-my-custom-validator='Введите только числа (от 0 до 9)'"
       }, {
-        "id": "input_comment_id",
+        "id": "input_comment_id_1",
         "fake_placeholder": "Комментарий*",
         "placeholder": "Комментарий",
         "name": "comment",

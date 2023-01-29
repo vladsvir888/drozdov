@@ -172,6 +172,7 @@ body {
 
 .animate-title {
   &__parent {
+    display: block;
     overflow: hidden;
 
     @include media('1200', max) {
@@ -180,6 +181,7 @@ body {
   }
 
   &__child {
+    display: block;
     transform: translateY(rem(150));
 
     @include media('1200', max) {

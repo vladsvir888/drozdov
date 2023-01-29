@@ -5,7 +5,8 @@
         <div class="sculpture-slider__wrap">
           {% view "@image" with {
             image: item.image|merge({
-              lazy: false
+              lazy: false,
+              alt: "Скульптура"
             })
           } %}
 
